@@ -1,0 +1,80 @@
+"""
+Measurable data used to answer comparison questions.
+
+Every key is something that can be compared. Each one maps a dimension
+to a value and a unit, for example size in kilometres or population as
+a headcount. Two things can only be compared when they share a unit.
+"""
+
+Measurement = dict[str, tuple[float, str]]
+
+COMPARABLE: dict[str, Measurement] = {
+    # Planets
+    "mercury": {"size": (4879, "km across"), "distance": (57.9, "million km from the Sun"), "moons": (0, "moons")},
+    "venus": {"size": (12104, "km across"), "distance": (108.2, "million km from the Sun"), "moons": (0, "moons")},
+    "earth": {"size": (12742, "km across"), "distance": (149.6, "million km from the Sun"), "moons": (1, "moon")},
+    "mars": {"size": (6779, "km across"), "distance": (227.9, "million km from the Sun"), "moons": (2, "moons")},
+    "jupiter": {"size": (139820, "km across"), "distance": (778.5, "million km from the Sun"), "moons": (95, "moons")},
+    "saturn": {"size": (116460, "km across"), "distance": (1434.0, "million km from the Sun"), "moons": (146, "moons")},
+    "uranus": {"size": (50724, "km across"), "distance": (2871.0, "million km from the Sun"), "moons": (28, "moons")},
+    "neptune": {"size": (49244, "km across"), "distance": (4495.0, "million km from the Sun"), "moons": (16, "moons")},
+    # Mountains
+    "everest": {"height": (8849, "m high")},
+    "k2": {"height": (8611, "m high")},
+    "aconcagua": {"height": (6961, "m high")},
+    "denali": {"height": (6190, "m high")},
+    "kilimanjaro": {"height": (5895, "m high")},
+    "elbrus": {"height": (5642, "m high")},
+    "mont blanc": {"height": (4808, "m high")},
+    "fuji": {"height": (3776, "m high")},
+    # Oceans
+    "pacific": {"area": (165.25, "million km2")},
+    "atlantic": {"area": (106.46, "million km2")},
+    "indian ocean": {"area": (70.56, "million km2")},
+    "southern ocean": {"area": (21.96, "million km2")},
+    "arctic ocean": {"area": (14.06, "million km2")},
+    # Rivers
+    "nile": {"length": (6650, "km long")},
+    "amazon": {"length": (6400, "km long")},
+    "yangtze": {"length": (6300, "km long")},
+    "yellow river": {"length": (5464, "km long")},
+    "congo": {"length": (4700, "km long")},
+    "mississippi": {"length": (3766, "km long")},
+    # Animals by mass
+    "blue whale": {"mass": (150000, "kg")},
+    "african elephant": {"mass": (6000, "kg")},
+    "elephant": {"mass": (6000, "kg")},
+    "horse": {"mass": (500, "kg")},
+    "lion": {"mass": (190, "kg")},
+    "tiger": {"mass": (220, "kg")},
+    "dog": {"mass": (30, "kg")},
+    "cat": {"mass": (4.5, "kg")},
+    "mouse": {"mass": (0.02, "kg")},
+    "human": {"mass": (70, "kg")},
+    # Countries by area and population
+    "russia": {"area": (17098246, "km2"), "population": (144000000, "people")},
+    "canada": {"area": (9984670, "km2"), "population": (40000000, "people")},
+    "united states": {"area": (9833517, "km2"), "population": (335000000, "people")},
+    "usa": {"area": (9833517, "km2"), "population": (335000000, "people")},
+    "china": {"area": (9596961, "km2"), "population": (1412000000, "people")},
+    "brazil": {"area": (8515767, "km2"), "population": (216000000, "people")},
+    "australia": {"area": (7692024, "km2"), "population": (27000000, "people")},
+    "india": {"area": (3287263, "km2"), "population": (1428000000, "people")},
+    "argentina": {"area": (2780400, "km2"), "population": (46000000, "people")},
+    "japan": {"area": (377975, "km2"), "population": (124000000, "people")},
+    "philippines": {"area": (300000, "km2"), "population": (117000000, "people")},
+    "indonesia": {"area": (1904569, "km2"), "population": (277000000, "people")},
+    "mexico": {"area": (1964375, "km2"), "population": (129000000, "people")},
+    # Cities by population
+    "tokyo": {"population": (37000000, "people")},
+    "delhi": {"population": (32000000, "people")},
+    "shanghai": {"population": (29000000, "people")},
+    "sao paulo": {"population": (22000000, "people")},
+    "mexico city": {"population": (22000000, "people")},
+    "cairo": {"population": (22000000, "people")},
+    "manila": {"population": (14700000, "people")},
+    "new york": {"population": (20000000, "people")},
+    "london": {"population": (9500000, "people")},
+    "paris": {"population": (11000000, "people")},
+    "jakarta": {"population": (11000000, "people")},
+}
